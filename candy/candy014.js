@@ -5,6 +5,24 @@
 
 function uniqueOrder(sequence) {
   // 實作寫在這裡
+  // no need to convert string to array if it's not already, since for...of can be used to iterate over any iterable
+
+  // to store the unique characters
+  const result = [];
+  // to store the last character that was added to the result array
+  let lastChar = '';
+
+  for (const char of sequence) {
+    // check if the current character is different from the last one that was added to the result array
+    if (char !== lastChar) {
+      // if it is, add the current character to the result array
+      result.push(char);
+      // set the lastChar variable to the current character
+      lastChar = char;
+    }
+  }
+
+  return result;
 }
 
 console.log(uniqueOrder("AABCC")) // [ 'A', 'B', 'C']
