@@ -1,7 +1,7 @@
 // 編號：CANDY-018
 // 程式語言：JavaScript
 // 題目：實作一個可以印出隨機整數的函數
-function randomNumber(min = 0, max){
+function randomNumber(min = 0, max) {
   // when only one argument is passed, min is assigned the value of the single argument, while max remains undefined
   if (max === undefined) {
     max = min;
@@ -15,5 +15,5 @@ function randomNumber(min = 0, max){
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
-console.log(randomNumber(50)) // 隨機印出 0 ~ 49 之間的任何一個數字
-console.log(randomNumber(5, 30)) // 隨機印出 5 ~ 29 之間的任何一個數字
+console.log(randomNumber(50)); // 隨機印出 0 ~ 49 之間的任何一個數字
+console.log(randomNumber(5, 30)); // 隨機印出 5 ~ 29 之間的任何一個數字

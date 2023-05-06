@@ -4,11 +4,21 @@
 
 function isSquare(num) {
   // 實作寫在這裡
+  // check if the given number is non-negative
+  if (num < 0) {
+    return false;
+  }
+
+  // calculate the square root of the given number
+  const squareRoot = Math.sqrt(num);
+
+  // check if the square root is an integer
+  return Number.isInteger(squareRoot);
 }
 
-console.log(isSquare(0)) // true
-console.log(isSquare(4)) // true
-console.log(isSquare(5)) // false
-console.log(isSquare(100)) // true
-console.log(isSquare(-4)) // false
-console.log(isSquare(-1)) // false
+console.log(isSquare(0)); // true
+console.log(isSquare(4)); // true
+console.log(isSquare(5)); // false
+console.log(isSquare(100)); // true
+console.log(isSquare(-4)); // false
+console.log(isSquare(-1)); // false
