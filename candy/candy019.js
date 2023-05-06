@@ -4,15 +4,13 @@
 
 function isSquare(num) {
   // 實作寫在這裡
-  // check if the given number is non-negative
-  if (num < 0) {
-    return false;
-  }
 
   // calculate the square root of the given number
+  // if the input number is negative, Math.sqrt() will return NaN
   const squareRoot = Math.sqrt(num);
 
   // check if the square root is an integer
+  // Number.isInteger(NaN) will return false
   return Number.isInteger(squareRoot);
 }
 
